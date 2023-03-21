@@ -4,13 +4,21 @@ body
     font-size: 20px;
     
 }
+
 #header
 {
     text-align: center;
 }
+#bus_stop1
+{
+    height: auto;
+    width: auto;
+   
+}
+
 #bus_stops
 {
-
+    
 }
 #price
 {
