@@ -1,4 +1,5 @@
-
+discount=0;
+price=0;
 
 function createInputs()
 {
@@ -13,5 +14,20 @@ function createInputs()
     Parent.append(inPut1, inPut2, br);
 }
 
+function price_KM(event)
+{
+    
+    price = event.value;
+}
+function selectDiscount(event)
+{
+    
+    discount = event.value;
+}
+function ticketButton()
+{
+    const values = document.getElementById("summary");
+    
 
+}
 createInputs();
