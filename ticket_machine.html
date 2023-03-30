@@ -11,12 +11,15 @@
         <div id="bus_stop1">
         </div>
         <button onclick="createInputs()">Confirm</button>
+        <button onclick="saveInputs()">Save</button>
     </div>
     <div id="price">
         <br><input min="0" type="number" placeholder="Price Per Kilometer" onchange="price_KM(this)">
+
     </div>
+    <div id="selectedstops"></div>
     <select id="discount" onchange="selectDiscount(this)">
-        <option value = "0">Without discount</option>
+        <option value="0">Without discount</option>
         <option value="37">0 -17 years old - 37%</option>
         <option value="50">18 - 26 years old - 50%</option>
         <option value="55">63 years old and upwards - 55% discount</option>
