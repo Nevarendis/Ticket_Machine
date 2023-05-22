@@ -54,20 +54,24 @@ function saveInputs() {
     Parent1.append(selectto);
     selectto.onchange = endbusstop1;
 
+
     for (let i = 1; i <= inputCount; i++) {
         const option1 = document.createElement("option");
         option1.innerHTML = citiesArray[i - 1];
         option1.value = citiesArray[i - 1];
         selectto.append(option1);
     }
+    selectto.selectedIndex = citiesArray.length - 1
+    startbusstop = citiesArray[0]
+    endbusstop = citiesArray[citiesArray.length - 1]
 }
 
 function startbusstop1(event) {
-    startbusstop = event.value;
+    startbusstop = event.target.value;
 }
 
 function endbusstop1(event) {
-    endbusstop = event.value;
+    endbusstop = event.target.value;
 }
 
 function price_KM(event) {
@@ -80,8 +84,30 @@ function selectDiscount(event) {
 
 function ticketButton() {
     const values = document.getElementById("summary");
+    
+    const citiesArray = Object.keys(database);
+    const distancesArray = Object.values(database);
+    
+    const startBusIndex = citiesArray.findIndex(x => x === startbusstop);
+    const endBusIndex = citiesArray.findIndex(x => x === endbusstop);
+    
+    const selectedDistances = distancesArray.slice(startBusIndex + 1, endBusIndex + 1);
+    
+    
+    
     let price_KM = document.getElementById("price");
+    let totalDistance = 0;
+    
+    for (let distance of selectedDistances) {
+        totalDistance = totalDistance + parseInt(distance);
+    }
+    
+    // console.log(totalDistance, price, discount, startbusstop, endbusstop);
+    const result = totalDistance * parseInt(price) * (100 - discount) / 100;
+    const money = document.getElementById("money").innerHTML= result + " PLN";
+
 }
+
 
 createInputs();
 

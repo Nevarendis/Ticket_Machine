@@ -3,41 +3,53 @@
 <head>
     
     <link rel="stylesheet"  href="style_1.css" type="text/css" />
+
 </head>
 <body>
     <div id="header">Ticket Machine</div>
 
-    <div id="bus_stops">
-        <div id="bus_stop1">
+    <div id="container">
+        <div id="buses">
+            <div id="bus_stops">
+            <div id="bus_stop1">
+            </div>
+                <button onclick="createInputs()">Add Bus Stop</button>
+                <button onclick="saveInputs()">Save</button>
+            </div>
         </div>
-        <button onclick="createInputs()">Confirm</button>
-        <button onclick="saveInputs()">Save</button>
-    </div>
-    <div id="price">
-        <br><input min="0" type="number" placeholder="Price Per Kilometer" onchange="price_KM(this)">
+        <div id="cost">
+            <div id="price">
+                <br><input min="0" type="number" placeholder="Price Per Kilometer" onchange="price_KM(this)">
+            </div>
+        </div> 
+        <div id="interval">
+            From:
+            <div id="selectedstops">
+            </div>
+            To:
+            <div id="selectedstops2">
+            </div>
+        </div>
+        <div id="rabat">
+            <select id="discount" onchange="selectDiscount(this)">
+                <option value="0">Without discount</option>
+                <option value="37">0 -17 years old - 37%</option>
+                <option value="50">18 - 26 years old - 50%</option>
+                <option value="55">63 years old and upwards - 55% discount</option>
+            </select>
+        </div>
 
+    </div>    
+    <div id="end">
+        <button id="ticketButton" onclick="ticketButton()">Get Ticket</button>
+        <div id="summary">To pay:  </div> <div id="money"></div>
     </div>
-    Od:
-    <div id="selectedstops">
-        
-    </div>
-    Do:
-    <div id="selectedstops2">
-        
-    </div>
-    <select id="discount" onchange="selectDiscount(this)">
-        <option value="0">Without discount</option>
-        <option value="37">0 -17 years old - 37%</option>
-        <option value="50">18 - 26 years old - 50%</option>
-        <option value="55">63 years old and upwards - 55% discount</option>
-    </select>
-    
-    <button id="ticketButton" onclick="ticketButton()">Get Ticket</button>
-    <div id="summary">To pay:  </div>
-    
 
 
     <script src="functions.js">
     </script>
+    <div id="footer">
+
+    </div>
 </body>
 </html>

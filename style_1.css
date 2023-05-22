@@ -1,34 +1,63 @@
 body
 {
-    background-color: lightgray;
+    
+    width: 1000px;
+    background-image: url("autobus.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #696969;
     font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
-#header
-{
+#header{
     text-align: center;
+    padding-bottom: 10px;
 }
-#bus_stop1
-{
-    height: auto;
-    width: auto;
-   
-}
+#cointainer{
+    padding-top: 10px;
 
-#bus_stops
-{
+}
+#buses{
+    height: 73px;
+    width: 200px;
+    float: left;
+    
     
 }
-#price
-{
-
+#bus_stops{
+    float: left;
+}
+#cost{
+    height: 142px;
+    width: 230px;
+    float: left;
+}
+#interval{
+    height: 142px;
+    width: 230px;
+    float: left;
 }
 #ticketButton
 {
     margin-top: 10px;
 }
+#rabat{   
+    height: 18px;
+    width: 268px;
+    float: left;
+}
+#end{
+    clear: both;
+}
 #summary
-{
+{   
+    height: 18px;
+    width: 268px;
     margin-top: 10pxs;
+}
+#money{
+    float: left;
 }
