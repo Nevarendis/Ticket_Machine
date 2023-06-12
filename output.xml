@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.2 on win32)" generated="20230612 19:59:19.258" rpa="false" schemaversion="3">
+<suite id="s1" name="T" source="c:\xampp\htdocs\Ticket Machine\t.robot">
+<test id="s1-t1" name="The Machine Calculates The Price With Negative Value for Price Per Kilometer" line="36">
+<kw name="Open the browser">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Firefox</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230612 19:59:20.515" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<status status="PASS" starttime="20230612 19:59:20.512" endtime="20230612 19:59:32.372"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost/Ticket%20Machine/ticket_machine.html</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230612 19:59:32.382" level="INFO">Opening browser 'firefox' to base url 'http://localhost/Ticket%20Machine/ticket_machine.html'.</msg>
+<status status="PASS" starttime="20230612 19:59:32.382" endtime="20230612 19:59:44.286"/>
+</kw>
+<status status="PASS" starttime="20230612 19:59:20.510" endtime="20230612 19:59:44.286"/>
+</kw>
+<kw name="Fill the bus stop">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:BusStop1</arg>
+<arg>Reda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 19:59:44.296" level="INFO">Typing text 'Reda' into text field 'id:BusStop1'.</msg>
+<status status="PASS" starttime="20230612 19:59:44.296" endtime="20230612 19:59:45.064"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Distance1</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 19:59:45.074" level="INFO">Typing text '0' into text field 'id:Distance1'.</msg>
+<status status="PASS" starttime="20230612 19:59:45.064" endtime="20230612 19:59:45.144"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="bus_stops"]/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230612 19:59:45.144" level="INFO">Clicking button 'xpath://*[@id="bus_stops"]/button[1]'.</msg>
+<status status="PASS" starttime="20230612 19:59:45.144" endtime="20230612 19:59:45.456"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:BusStop2</arg>
+<arg>Rumia</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 19:59:45.456" level="INFO">Typing text 'Rumia' into text field 'id:BusStop2'.</msg>
+<status status="PASS" starttime="20230612 19:59:45.456" endtime="20230612 19:59:45.537"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Distance2</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 19:59:45.537" level="INFO">Typing text '10' into text field 'id:Distance2'.</msg>
+<status status="PASS" starttime="20230612 19:59:45.537" endtime="20230612 19:59:45.569"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="bus_stops"]/button[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230612 19:59:45.579" level="INFO">Clicking button 'xpath://*[@id="bus_stops"]/button[2]'.</msg>
+<status status="PASS" starttime="20230612 19:59:45.579" endtime="20230612 19:59:45.832"/>
+</kw>
+<status status="PASS" starttime="20230612 19:59:44.296" endtime="20230612 19:59:45.832"/>
+</kw>
+<kw name="Price per kilometer2">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="price"]/input</arg>
+<arg>-2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 19:59:45.842" level="INFO">Typing text '-2' into text field 'xpath://*[@id="price"]/input'.</msg>
+<status status="PASS" starttime="20230612 19:59:45.832" endtime="20230612 19:59:45.895"/>
+</kw>
+<status status="PASS" starttime="20230612 19:59:45.832" endtime="20230612 19:59:45.895"/>
+</kw>
+<kw name="Discount 0percent">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath://*[@id="discount"]</arg>
+<arg>0</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230612 19:59:45.895" level="INFO">Selecting options from selection list 'xpath://*[@id="discount"]' by value 0.</msg>
+<status status="PASS" starttime="20230612 19:59:45.895" endtime="20230612 19:59:45.948"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="ticketButton"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230612 19:59:45.958" level="INFO">Clicking button 'xpath://*[@id="ticketButton"]'.</msg>
+<status status="PASS" starttime="20230612 19:59:45.958" endtime="20230612 19:59:46.221"/>
+</kw>
+<status status="PASS" starttime="20230612 19:59:45.895" endtime="20230612 19:59:46.221"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${money}</var>
+<arg>//*[@id="money"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230612 19:59:46.292" level="INFO">${money} = -20 PLN</msg>
+<status status="PASS" starttime="20230612 19:59:46.221" endtime="20230612 19:59:46.292"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${money}</arg>
+<arg>20 PLN</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230612 19:59:46.302" level="FAIL">-20 PLN != 20 PLN</msg>
+<status status="FAIL" starttime="20230612 19:59:46.292" endtime="20230612 19:59:46.302"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230612 19:59:46.302" endtime="20230612 19:59:49.971"/>
+</kw>
+<status status="FAIL" starttime="20230612 19:59:20.507" endtime="20230612 19:59:49.971">-20 PLN != 20 PLN</status>
+</test>
+<status status="FAIL" starttime="20230612 19:59:19.286" endtime="20230612 19:59:49.981"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="T">T</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
